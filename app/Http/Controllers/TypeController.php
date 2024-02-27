@@ -12,4 +12,5 @@ class TypeController extends Controller
 
         return view('pages.type.index', compact('types'));
     }
+    
 }

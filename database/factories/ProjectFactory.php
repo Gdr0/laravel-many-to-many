@@ -19,6 +19,7 @@ class ProjectFactory extends Factory
         return [
             'name' => fake() -> word(),
             'description'=> fake() -> sentence(10),
+            'image'=> null,
         ];
     }
 }

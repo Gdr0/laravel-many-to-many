@@ -7,5 +7,19 @@ Route::get('/', function () {
 
     return view('pages.index');
 });
-route :: get('/projects', [ProjectController :: class, 'index']) -> name('project.index');
-route :: get ('/types', [TypeController :: class, 'index']) -> name('type.index');
+
+Route :: get('/projects', [ProjectController :: class, 'index'])
+    -> name('project.index');
+Route :: get('/types', [TypeController :: class, 'index'])
+    -> name('type.index');
+
+Route :: get('/projects/create', [ProjectController :: class, 'create'])
+    -> name('project.create');
+Route :: post('/projects/create', [ProjectController :: class, 'store'])
+    -> name('project.store');
+
+
+Route :: get('/projects/{id}/edit', [ProjectController :: class, 'edit'])
+    -> name('project.edit');
+Route :: put('/projects/{id}/edit', [ProjectController :: class, 'update'])
+    -> name('project.update');

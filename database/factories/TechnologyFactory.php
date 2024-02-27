@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Technology>
  */
 class TechnologyFactory extends Factory
 {
@@ -18,7 +18,7 @@ class TechnologyFactory extends Factory
     {
         return [
             "name" => fake() -> word,
-            "description" => fake() -> word(3)
+            "description" => fake() -> word(3, true)
         ];
     }
 }
