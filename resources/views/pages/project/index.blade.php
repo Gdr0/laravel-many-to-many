@@ -4,9 +4,12 @@
 @endsection
 @section('content')
     <h1>Projects</h1>
-    <a href="{{ route('project.create') }}">CREATE</a>
-    <ul>
+    <a style="font-size: 50px;" href="{{ route('project.create') }}">CREATE</a>
+    <br>
+    <br>
+    <ul style="list-style-type: none;">
         @foreach ($projects as $project)
+        <br>
             <li>
                 {{ $project -> name }} :
                 {{ $project -> type -> name }}
@@ -21,7 +24,11 @@
                         </li>
                     @endforeach
                 </ul>
+                @if ($project -> image)
+                <img src="{{ asset('/storage/' . $project -> image) }}" width="100px">
+                @endif 
             </li>
+            <br>
         @endforeach
     </ul>
 @endsection
